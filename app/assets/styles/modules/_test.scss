@@ -1,0 +1,8 @@
+h1 {
+	color: blue;
+	@include respond(720px, 500px) {
+			color: red;}
+}
+button {
+ @extend .button, .is-warning;
+}

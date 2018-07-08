@@ -16,7 +16,11 @@ gulp.task('watch', function(){////////////////////// gulp watch task
 		browserSync.reload();//reloads browser
 	});
 
-	watch('./app/assets/styles/**/*.css', function() { //double qoutes selects future folders
+	// watch('./app/assets/styles/**/*.scss', function() { //double qoutes selects future folders
+	// 	gulp.start('cssInject');//a css task
+	// });
+
+	watch('./app/assets/styles/**/*.scss', ['styles'],function() {
 		gulp.start('cssInject');//a css task
 	});
 

@@ -1,0 +1,39 @@
+@mixin clearfix {
+	&::after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+}
+
+@mixin absCenter {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*
+0-600px: phone
+600-900px: tab portrait
+900-1200: tab landscasape
+1200-1800: desktop
+1800 + : big desktop
+*/
+
+/*
+
+ORDER: base + typography > general layout + grid > page layout > components
+
+
+$breakpoint argument choices
+-xSmall
+-small
+-medium
+-large
+-xLarge
+*/
+
+@mixin respond($lessThan, $moreThan : 0) {
+		@media only screen and (max-width: $lessThan) #{and (min-width: $moreThan)} {@content}
+}
