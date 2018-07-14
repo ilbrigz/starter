@@ -3,7 +3,7 @@ watch = require('gulp-watch'),//imports the watch
 browserSync = require('browser-sync').create();// server
 
 
-gulp.task('watch', function(){////////////////////// gulp watch task
+gulp.task('watch',['scriptsRefresh'], function(){////////////////////// gulp watch task
 
 	browserSync.init({
 		notify: false, //removes notification uppon changes
